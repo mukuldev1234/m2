@@ -1,0 +1,9 @@
+import pandas as pd
+
+df=pd.read_csv('Assignment_Timecard.csv')
+
+print(df.to_string())
+df.query("Timecard Hours (as Time)>1 AND Timecard Hours (as Time)<10 ")
+df.query("for n in ALL_EMPLOYEES:
+    for d in all_days:
+        if sum([shifts[(n, d, 0)], shifts[(n, d, 1)], shifts[(n, (d), 2)]]) == 1")
